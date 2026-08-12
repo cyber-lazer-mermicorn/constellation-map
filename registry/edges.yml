@@ -1,0 +1,78 @@
+# Constellation edges — where value flows
+version: "0.1.0"
+
+edges:
+  - from: profile
+    to: grove
+    relation: navigates_to
+    note: Public entry points to canonical registry
+
+  - from: grove
+    to: constellation_map
+    relation: uses
+    note: Grove status informed by connector map next-actions
+
+  - from: constellation_map
+    to: tower
+    relation: maps_skill
+    note: Tower is the AI-job skill Rosetta
+
+  - from: tower
+    to: operator
+    relation: feeds_curriculum
+    note: Floors map to apprenticeship capability rungs
+
+  - from: operator
+    to: commerce
+    relation: deploys_into
+    note: Ladder ends in deployable AI-commerce workflows
+
+  - from: ravewear
+    to: graphic
+    relation: consumes
+    note: Visual system for Drop 001 mockups
+
+  - from: ravewear
+    to: commerce
+    relation: packages_through
+    note: Listings and campaigns via commerce engine
+
+  - from: travel
+    to: commerce
+    relation: packages_through
+    note: Deal packets become sellable recommendations
+
+  - from: auto
+    to: commerce
+    relation: packages_through
+    note: Vehicle packets → buyer match → follow-up
+
+  - from: graphic
+    to: commerce
+    relation: supplies_assets
+    note: Shared visuals for listings and brand
+
+  - from: token_saver
+    to: operator
+    relation: optimizes
+    note: Token budgets and handoff packs
+
+  - from: mcp_hub
+    to: tower
+    relation: aligns_with
+    note: MCP patterns match TypeScript gateway exhibits
+
+  - from: agent_orch
+    to: tower
+    relation: aligns_with
+    note: Orchestration patterns match Python agent runtime
+
+  - from: memory
+    to: constellation_map
+    relation: informs_private
+    note: Private continuity only; no public leakage
+
+  - from: private_ops
+    to: commerce
+    relation: feeds_leads
+    note: Operational leads stay private; public code only patterns
