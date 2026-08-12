@@ -1,0 +1,148 @@
+# Constellation nodes — what exists
+version: "0.1.0"
+updated: "2026-08-12"
+
+nodes:
+  - id: grove
+    name: mermicorn-grove
+    kind: registry
+    visibility: public
+    role: Canonical constellation registry, architecture, status, integration map
+    capability: [identity, status, architecture]
+    url: https://github.com/cyber-lazer-mermicorn/mermicorn-grove
+    next: Keep status accurate; never overclaim private surfaces
+
+  - id: tower
+    name: tower-of-babel
+    kind: skill_surface
+    visibility: public
+    role: AI systems engineering Rosetta Stone for remote AI roles
+    capability: [polyglot, evidence_gates, recruiter_signal, flagship_pipeline]
+    url: https://github.com/cyber-lazer-mermicorn/tower-of-babel
+    next: Promote gated floors when CI toolchains exist; keep VERIFY green
+
+  - id: constellation_map
+    name: constellation-map
+    kind: connector
+    visibility: public
+    role: Map + skill connector — resources, strategies, standards, processes, engines
+    capability: [routing, next_actions, standards_enforcement]
+    url: https://github.com/cyber-lazer-mermicorn/constellation-map
+    next: Expand nodes/edges as verticals mature; keep NEXT.md current
+
+  - id: profile
+    name: cyber-lazer-mermicorn
+    kind: gateway
+    visibility: public
+    role: Special profile and public gateway into the Grove
+    capability: [brand, navigation]
+    url: https://github.com/cyber-lazer-mermicorn/cyber-lazer-mermicorn
+    next: Point visitors to Grove + Tower + verticals without overclaim
+
+  - id: commerce
+    name: mermicorn-commerce-ai
+    kind: engine
+    visibility: public
+    role: Product records, pricing, listings, leads, campaigns, multichannel packages
+    capability: [commerce_ai, listings, leads]
+    url: https://github.com/cyber-lazer-mermicorn/mermicorn-commerce-ai
+    next: Feed verified opportunities from verticals into sales packages
+
+  - id: graphic
+    name: mermicorn-graphic-ai
+    kind: engine
+    visibility: public
+    role: Shared visual system across clothing, gaming, listings, travel, branding
+    capability: [visual_system, brand_assets]
+    url: https://github.com/cyber-lazer-mermicorn/mermicorn-graphic-ai
+    next: Align Drop 001 + vertical listing assets
+
+  - id: token_saver
+    name: mermicorn-token-saver
+    kind: engine
+    visibility: public
+    role: Prompt packs, context compression, handoffs, token budgets
+    capability: [efficiency, handoffs]
+    url: https://github.com/cyber-lazer-mermicorn/mermicorn-token-saver
+    next: Wire budgets into operator apprenticeship modules
+
+  - id: ravewear
+    name: cherry-ravewear-studio
+    kind: vertical
+    visibility: public
+    role: Primary passion brand — rave clothing, Drop 001, mockups, tech packs
+    capability: [design, production_handoff]
+    url: https://github.com/cyber-lazer-mermicorn/cherry-ravewear-studio
+    next: Package Drop 001 through commerce engine
+
+  - id: travel
+    name: cherry-travel-deal-lab
+    kind: vertical
+    visibility: public
+    role: Travel deal research, comparison, portfolio recommendations
+    capability: [deal_hunting, itinerary]
+    url: https://github.com/cyber-lazer-mermicorn/cherry-travel-deal-lab
+    next: Publish case studies; feed high-signal deals to commerce
+
+  - id: auto
+    name: cherry-auto-matchmaker
+    kind: vertical
+    visibility: public
+    role: Vehicle research packets, comps, buyer matching, follow-up sequences
+    capability: [auto_sales, comps]
+    url: https://github.com/cyber-lazer-mermicorn/cherry-auto-matchmaker
+    next: Standardize packet schema with commerce
+
+  - id: rift
+    name: cherry-rift-lab
+    kind: vertical
+    visibility: public
+    role: Wild Rift journals, patch digests, matchup notes
+    capability: [gaming_content]
+    url: https://github.com/cyber-lazer-mermicorn/cherry-rift-lab
+    next: Keep patch cadence; portfolio-ready builds
+
+  - id: operator
+    name: cherry-operator-apprenticeship
+    kind: ladder
+    visibility: public
+    role: Capability ladder toward AI-commerce and technical work
+    capability: [curriculum, deployable_workflows]
+    url: https://github.com/cyber-lazer-mermicorn/cherry-operator-apprenticeship
+    next: Map modules to Tower floors + commerce engine
+
+  - id: mcp_hub
+    name: mcp-hub
+    kind: infrastructure
+    visibility: public
+    role: MCP integration hub for agent tools
+    capability: [mcp, tool_routing]
+    url: https://github.com/cyber-lazer-mermicorn/mcp-hub
+    next: Align with Tower TypeScript MCP gateway patterns
+
+  - id: agent_orch
+    name: ai-agent-orchestrator
+    kind: infrastructure
+    visibility: public
+    role: Agent orchestration infrastructure
+    capability: [agents, orchestration]
+    url: https://github.com/cyber-lazer-mermicorn/ai-agent-orchestrator
+    next: Cross-link Tower Python orchestrator exhibits
+
+  - id: memory
+    name: mermicorn-memory
+    kind: memory
+    visibility: private
+    role: Preferences, skills, evidence, project history, decisions, continuity
+    capability: [continuity, evidence]
+    url: null
+    next: Keep private; never imply public reachability
+
+  - id: private_ops
+    name: mermicorn-private-ops
+    kind: ops
+    visibility: private
+    role: Operational records — vendor data, unpublished designs, applications, leads
+    capability: [ops_records]
+    url: null
+    next: No secrets in repo; private only
