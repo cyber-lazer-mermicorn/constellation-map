@@ -1,0 +1,15 @@
+name: constellation-map
+kind: connector
+visibility: public
+role: Map and skill connector for Mermicorn Grove
+owner: cyber-lazer-mermicorn
+rights: proprietary
+related:
+  - mermicorn-grove
+  - tower-of-babel
+  - cyber-lazer-mermicorn
+standards:
+  - standards/QUALITY.md
+  - standards/RIGHTS.md
+  - standards/AGENTS.md
+loop: Discover-Compare-Verify-Design-Package-Sell-Learn
