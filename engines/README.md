@@ -1,14 +1,18 @@
 # Engines
 
-Shared systems that multiple verticals consume.
+Shared systems multiple verticals and surfaces consume.
 
-| Engine | Repo | Consumed by |
-|--------|------|-------------|
-| Commerce AI | mermicorn-commerce-ai | ravewear, travel, auto |
-| Graphic AI | mermicorn-graphic-ai | ravewear, listings, brand |
-| Token saver | mermicorn-token-saver | operator, agents |
-| MCP hub | mcp-hub | agent surfaces |
-| Agent orchestrator | ai-agent-orchestrator | mission runtimes |
+| Engine | Repo | Primary consumers |
+|--------|------|-------------------|
+| Commerce AI | mermicorn-commerce-ai | ravewear, travel, auto, numismatic |
+| Graphic AI | mermicorn-graphic-ai | ravewear, listings, rift, chance, brand |
+| Token saver | mermicorn-token-saver | operator, agent-orchestrator |
+| Mega boot | mermicorn-mega-boot | new compliant projects |
+| Client | mermicorn-client | command-board, vertical integration |
 | Tower (skill) | tower-of-babel | operator ladder, job surface |
+| MCP hub | mcp-hub | agent tools |
+| Agent orchestrator | ai-agent-orchestrator | missions |
+| AI gateway | ai-gateway | providers, rate limits |
+| Observability | ai-observability | command-board metrics |
 
-Engines expose **capabilities**, not product SKUs. Verticals own product narrative.
+Engines expose **capabilities**. Verticals own product narrative.

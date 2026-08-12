@@ -1,20 +1,23 @@
 # Next actions
 
-Prioritized. Check off by editing this file when done.
+## Done
+- [x] Tower harden + VERIFY
+- [x] constellation-map seed
+- [x] Fill constellation — 49 nodes / 67 edges
 
 ## Now
-- [x] Tower harden + VERIFY pass (CLI restored, exhibits green)
-- [x] Seed constellation-map (nodes, edges, standards, engines)
-- [ ] Align operator-apprenticeship modules → Tower floors (explicit table)
-- [ ] Grove STATUS note linking constellation-map as connector surface
+- [ ] Grove STATUS: link constellation-map as connector surface
+- [ ] Operator modules → Tower floors table
+- [ ] Portfolio feature Tower + top showcases
 
 ## Next
-- [ ] Drop 001 packet through graphic + commerce engines
-- [ ] Travel case study → commerce schema
-- [ ] Auto packet schema parity with commerce
-- [ ] Tower CI: optional toolchain jobs for Haskell/Zig when available
+- [ ] Drop 001 → graphic + commerce package
+- [ ] Travel + auto packet schema parity with commerce
+- [ ] Numismatic provenance → commerce
+- [ ] command-board live NEXT + Grove status
+- [ ] Tower CI optional toolchains for gated floors
 
 ## Later
 - [ ] Promote Tower gated floors only with proof
-- [ ] MCP hub patterns ↔ Tower TypeScript gateway shared checklist
-- [ ] Private memory hygiene audit (no public leakage)
+- [ ] MCP hub ↔ Tower gateway shared checklist
+- [ ] Private memory/ops hygiene (no public leakage)

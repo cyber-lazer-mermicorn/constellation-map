@@ -1,9 +1,10 @@
 # Changelog
 
+## 0.2.0 — 2026-08-12
+- Full constellation fill: 49 nodes, 67 edges
+- Kinds: identity, skill/career, engines, verticals, infrastructure, toolkits, showcases, private
+- validate_map ok
+- README / STATUS / NEXT / engines updated
+
 ## 0.1.0 — 2026-08-12
-- Initial constellation-map seed
-- Nodes for core public + private (truth-safe) surfaces
-- Edges for value flow
-- Standards, strategy, processes, engines, NEXT
-- validate_map.py
-- Linked from Tower VERIFY pass
+- Initial seed

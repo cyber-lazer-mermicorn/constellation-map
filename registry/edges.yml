@@ -1,78 +1,69 @@
-# Constellation edges — where value flows
-version: "0.1.0"
-
+version: "0.2.0"
 edges:
-  - from: profile
-    to: grove
-    relation: navigates_to
-    note: Public entry points to canonical registry
-
-  - from: grove
-    to: constellation_map
-    relation: uses
-    note: Grove status informed by connector map next-actions
-
-  - from: constellation_map
-    to: tower
-    relation: maps_skill
-    note: Tower is the AI-job skill Rosetta
-
-  - from: tower
-    to: operator
-    relation: feeds_curriculum
-    note: Floors map to apprenticeship capability rungs
-
-  - from: operator
-    to: commerce
-    relation: deploys_into
-    note: Ladder ends in deployable AI-commerce workflows
-
-  - from: ravewear
-    to: graphic
-    relation: consumes
-    note: Visual system for Drop 001 mockups
-
-  - from: ravewear
-    to: commerce
-    relation: packages_through
-    note: Listings and campaigns via commerce engine
-
-  - from: travel
-    to: commerce
-    relation: packages_through
-    note: Deal packets become sellable recommendations
-
-  - from: auto
-    to: commerce
-    relation: packages_through
-    note: Vehicle packets → buyer match → follow-up
-
-  - from: graphic
-    to: commerce
-    relation: supplies_assets
-    note: Shared visuals for listings and brand
-
-  - from: token_saver
-    to: operator
-    relation: optimizes
-    note: Token budgets and handoff packs
-
-  - from: mcp_hub
-    to: tower
-    relation: aligns_with
-    note: MCP patterns match TypeScript gateway exhibits
-
-  - from: agent_orch
-    to: tower
-    relation: aligns_with
-    note: Orchestration patterns match Python agent runtime
-
-  - from: memory
-    to: constellation_map
-    relation: informs_private
-    note: Private continuity only; no public leakage
-
-  - from: private_ops
-    to: commerce
-    relation: feeds_leads
-    note: Operational leads stay private; public code only patterns
+  - {from: profile, to: grove, relation: navigates_to, note: "Public entry → canonical registry"}
+  - {from: profile, to: constellation_map, relation: navigates_to, note: "Map + skill connector"}
+  - {from: profile, to: portfolio, relation: navigates_to, note: "Career portfolio"}
+  - {from: grove, to: constellation_map, relation: uses, note: "Status informed by connector next-actions"}
+  - {from: docs, to: grove, relation: documents, note: "Docs follow Grove architecture"}
+  - {from: command_board, to: grove, relation: reads_status, note: "Control plane consumes registry status"}
+  - {from: command_board, to: constellation_map, relation: reads_next, note: "Dashboard surfaces NEXT actions"}
+  - {from: constellation_map, to: tower, relation: maps_skill, note: "Tower is AI-job skill Rosetta"}
+  - {from: tower, to: operator, relation: feeds_curriculum, note: "Floors → apprenticeship rungs"}
+  - {from: operator, to: commerce, relation: deploys_into, note: "Ladder ends in AI-commerce workflows"}
+  - {from: tower, to: resume, relation: supplies_talking_points, note: "JOB_APPLICATION_SURFACE"}
+  - {from: tower, to: portfolio, relation: featured_in, note: "High-signal proof"}
+  - {from: tower, to: job_helix, relation: feeds, note: "Application workflow input"}
+  - {from: resume, to: job_helix, relation: used_by, note: "Resume in application helix"}
+  - {from: portfolio, to: job_helix, relation: used_by, note: "Portfolio links in applications"}
+  - {from: ravewear, to: graphic, relation: consumes, note: "Drop 001 visuals"}
+  - {from: ravewear, to: commerce, relation: packages_through, note: "Listings + campaigns"}
+  - {from: travel, to: commerce, relation: packages_through, note: "Deal packets → sellable recommendations"}
+  - {from: deal_finder, to: travel, relation: feeds, note: "Scored deals into lab"}
+  - {from: auto, to: commerce, relation: packages_through, note: "Vehicle packets → match → follow-up"}
+  - {from: numismatic, to: commerce, relation: packages_through, note: "Auction listings"}
+  - {from: numismatic, to: graphic, relation: consumes, note: "Photo / listing assets"}
+  - {from: rift, to: graphic, relation: consumes, note: "Content visuals"}
+  - {from: chance, to: graphic, relation: consumes, note: "Responsible UX visuals"}
+  - {from: graphic, to: commerce, relation: supplies_assets, note: "Shared listing/brand assets"}
+  - {from: token_saver, to: operator, relation: optimizes, note: "Token budgets + handoffs"}
+  - {from: token_saver, to: agent_orch, relation: optimizes, note: "Context compression"}
+  - {from: mega_boot, to: grove, relation: scaffolds_compliant, note: "Federation-compliant bootstrap"}
+  - {from: client, to: commerce, relation: integrates, note: "Client → commerce"}
+  - {from: client, to: command_board, relation: surfaces_in, note: "Platform client in control plane"}
+  - {from: mcp_hub, to: tower, relation: aligns_with, note: "MCP ↔ TypeScript gateway exhibits"}
+  - {from: agent_orch, to: tower, relation: aligns_with, note: "Orchestration ↔ Python agent runtime"}
+  - {from: ai_gateway, to: mcp_hub, relation: routes_through, note: "Provider routing"}
+  - {from: ai_gateway, to: agent_orch, relation: serves, note: "Gateway for agents"}
+  - {from: edge_runtime, to: ai_gateway, relation: deploys_behind, note: "Edge execution"}
+  - {from: ai_memory, to: agent_orch, relation: supplies, note: "Public memory patterns"}
+  - {from: ai_memory, to: rag_builder, relation: pairs_with, note: "RAG + memory"}
+  - {from: rag_builder, to: agent_orch, relation: feeds, note: "Retrieval into agents"}
+  - {from: multi_modal, to: graphic, relation: enables, note: "Multimodal generation"}
+  - {from: multi_modal, to: agent_orch, relation: enables, note: "Multimodal agents"}
+  - {from: ai_observability, to: command_board, relation: reports_to, note: "Metrics surface"}
+  - {from: ai_observability, to: agent_orch, relation: instruments, note: "Runtime telemetry"}
+  - {from: ai_benchmarks, to: tower, relation: aligns_with, note: "Eval harness concepts"}
+  - {from: ai_testing, to: tower, relation: aligns_with, note: "Eval / isolation patterns"}
+  - {from: ai_testing, to: ai_benchmarks, relation: feeds, note: "Test → benchmark"}
+  - {from: ai_starter, to: mega_boot, relation: emitted_by, note: "Template from bootstrap"}
+  - {from: ai_governance, to: tower, relation: aligns_with, note: "Policy ↔ safety governor ideas"}
+  - {from: ai_governance, to: command_board, relation: surfaces_in, note: "Compliance views"}
+  - {from: feature_flags, to: ai_gateway, relation: controls, note: "Flagged rollouts"}
+  - {from: security_scanner, to: mcp_hub, relation: scans, note: "Tool surface security"}
+  - {from: security_scanner, to: agent_orch, relation: scans, note: "Agent security"}
+  - {from: supabase_starter, to: showcase_supabase, relation: demonstrates, note: "Starter → showcase"}
+  - {from: groq_speed, to: ai_benchmarks, relation: feeds, note: "Latency data"}
+  - {from: groq_speed, to: showcase_groq, relation: supports, note: "Showcase evidence"}
+  - {from: vercel_cookbook, to: showcase_vercel, relation: supports, note: "Patterns → showcase"}
+  - {from: healthcare_toolkit, to: ai_governance, relation: requires, note: "Compliance-heavy domain"}
+  - {from: showcase_vercel, to: portfolio, relation: featured_in, note: "Job signal"}
+  - {from: showcase_supabase, to: portfolio, relation: featured_in, note: "Job signal"}
+  - {from: showcase_stripe, to: portfolio, relation: featured_in, note: "Job signal"}
+  - {from: showcase_openai, to: portfolio, relation: featured_in, note: "Job signal"}
+  - {from: showcase_groq, to: portfolio, relation: featured_in, note: "Job signal"}
+  - {from: showcase_anthropic, to: portfolio, relation: featured_in, note: "Job signal"}
+  - {from: showcase_langchain, to: portfolio, relation: featured_in, note: "Job signal"}
+  - {from: showcase_stripe, to: commerce, relation: narrates, note: "Payments story for commerce"}
+  - {from: memory, to: constellation_map, relation: informs_private, note: "Continuity only; no public leakage"}
+  - {from: private_ops, to: commerce, relation: feeds_leads_private, note: "Leads stay private; public code is patterns only"}
+  - {from: private_ops, to: job_helix, relation: feeds_applications_private, note: "Application records private"}

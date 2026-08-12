@@ -1,10 +1,10 @@
 # Status
 
-**Operational-alpha (0.1.0)** — 2026-08-12
+**Operational-alpha (0.2.0)** — 2026-08-12
 
-- Nodes and edges seeded for core public constellation
-- Standards, strategy, processes, engines documented
-- Private nodes listed without public URLs (truth rule)
-- Tower VERIFY pass linked as current skill evidence
+- **49 nodes** covering known public constellation + 2 private (truth-safe)
+- **67 edges** for navigation, skill path, engines→verticals, infrastructure mesh, showcases→career
+- `validate_map.py`: ok
+- Tower VERIFY pass remains current skill evidence
 
-Do not claim completeness across all 40+ GitHub items until nodes are verified here.
+Kinds: registry, connector, gateway, docs, control_plane, skill_surface, ladder, career, engine, vertical, infrastructure, toolkit, showcase, memory, ops.
