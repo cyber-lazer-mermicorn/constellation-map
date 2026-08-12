@@ -1,7 +1,5 @@
-# Constellation nodes — what exists
-version: "0.1.0"
+version: "0.2.0"
 updated: "2026-08-12"
-
 nodes:
   - id: grove
     name: mermicorn-grove
@@ -10,26 +8,15 @@ nodes:
     role: Canonical constellation registry, architecture, status, integration map
     capability: [identity, status, architecture]
     url: https://github.com/cyber-lazer-mermicorn/mermicorn-grove
-    next: Keep status accurate; never overclaim private surfaces
-
-  - id: tower
-    name: tower-of-babel
-    kind: skill_surface
-    visibility: public
-    role: AI systems engineering Rosetta Stone for remote AI roles
-    capability: [polyglot, evidence_gates, recruiter_signal, flagship_pipeline]
-    url: https://github.com/cyber-lazer-mermicorn/tower-of-babel
-    next: Promote gated floors when CI toolchains exist; keep VERIFY green
-
+    next: Link constellation-map as connector surface in STATUS
   - id: constellation_map
     name: constellation-map
     kind: connector
     visibility: public
     role: Map + skill connector — resources, strategies, standards, processes, engines
-    capability: [routing, next_actions, standards_enforcement]
+    capability: [routing, next_actions, standards]
     url: https://github.com/cyber-lazer-mermicorn/constellation-map
-    next: Expand nodes/edges as verticals mature; keep NEXT.md current
-
+    next: Keep nodes/edges complete as repos mature
   - id: profile
     name: cyber-lazer-mermicorn
     kind: gateway
@@ -37,71 +24,31 @@ nodes:
     role: Special profile and public gateway into the Grove
     capability: [brand, navigation]
     url: https://github.com/cyber-lazer-mermicorn/cyber-lazer-mermicorn
-    next: Point visitors to Grove + Tower + verticals without overclaim
-
-  - id: commerce
-    name: mermicorn-commerce-ai
-    kind: engine
+    next: Route visitors to Grove + Tower + verticals
+  - id: docs
+    name: docs
+    kind: docs
     visibility: public
-    role: Product records, pricing, listings, leads, campaigns, multichannel packages
-    capability: [commerce_ai, listings, leads]
-    url: https://github.com/cyber-lazer-mermicorn/mermicorn-commerce-ai
-    next: Feed verified opportunities from verticals into sales packages
-
-  - id: graphic
-    name: mermicorn-graphic-ai
-    kind: engine
+    role: Constellation documentation surface
+    capability: [docs]
+    url: https://github.com/cyber-lazer-mermicorn/docs
+    next: Align with Grove architecture docs
+  - id: command_board
+    name: command-board
+    kind: control_plane
     visibility: public
-    role: Shared visual system across clothing, gaming, listings, travel, branding
-    capability: [visual_system, brand_assets]
-    url: https://github.com/cyber-lazer-mermicorn/mermicorn-graphic-ai
-    next: Align Drop 001 + vertical listing assets
-
-  - id: token_saver
-    name: mermicorn-token-saver
-    kind: engine
+    role: Control plane dashboard — GitHub · Linear · Supabase · Vercel · HF · Context7 · Stytch · Neon · Postman
+    capability: [control_plane, integrations]
+    url: https://github.com/cyber-lazer-mermicorn/command-board
+    next: Wire live status from Grove + map NEXT
+  - id: tower
+    name: tower-of-babel
+    kind: skill_surface
     visibility: public
-    role: Prompt packs, context compression, handoffs, token budgets
-    capability: [efficiency, handoffs]
-    url: https://github.com/cyber-lazer-mermicorn/mermicorn-token-saver
-    next: Wire budgets into operator apprenticeship modules
-
-  - id: ravewear
-    name: cherry-ravewear-studio
-    kind: vertical
-    visibility: public
-    role: Primary passion brand — rave clothing, Drop 001, mockups, tech packs
-    capability: [design, production_handoff]
-    url: https://github.com/cyber-lazer-mermicorn/cherry-ravewear-studio
-    next: Package Drop 001 through commerce engine
-
-  - id: travel
-    name: cherry-travel-deal-lab
-    kind: vertical
-    visibility: public
-    role: Travel deal research, comparison, portfolio recommendations
-    capability: [deal_hunting, itinerary]
-    url: https://github.com/cyber-lazer-mermicorn/cherry-travel-deal-lab
-    next: Publish case studies; feed high-signal deals to commerce
-
-  - id: auto
-    name: cherry-auto-matchmaker
-    kind: vertical
-    visibility: public
-    role: Vehicle research packets, comps, buyer matching, follow-up sequences
-    capability: [auto_sales, comps]
-    url: https://github.com/cyber-lazer-mermicorn/cherry-auto-matchmaker
-    next: Standardize packet schema with commerce
-
-  - id: rift
-    name: cherry-rift-lab
-    kind: vertical
-    visibility: public
-    role: Wild Rift journals, patch digests, matchup notes
-    capability: [gaming_content]
-    url: https://github.com/cyber-lazer-mermicorn/cherry-rift-lab
-    next: Keep patch cadence; portfolio-ready builds
-
+    role: AI systems Rosetta Stone for remote AI roles — 20 floors, evidence gates
+    capability: [polyglot, evidence_gates, recruiter_signal]
+    url: https://github.com/cyber-lazer-mermicorn/tower-of-babel
+    next: Keep VERIFY green; promote gated floors only with toolchain proof
   - id: operator
     name: cherry-operator-apprenticeship
     kind: ladder
@@ -109,8 +56,127 @@ nodes:
     role: Capability ladder toward AI-commerce and technical work
     capability: [curriculum, deployable_workflows]
     url: https://github.com/cyber-lazer-mermicorn/cherry-operator-apprenticeship
-    next: Map modules to Tower floors + commerce engine
-
+    next: Map modules explicitly to Tower floors
+  - id: resume
+    name: cherry-resume
+    kind: career
+    visibility: public
+    role: Resume artifact for applications
+    capability: [career]
+    url: https://github.com/cyber-lazer-mermicorn/cherry-resume
+    next: Cross-link Tower JOB_APPLICATION_SURFACE talking points
+  - id: portfolio
+    name: cherry-portfolio
+    kind: career
+    visibility: public
+    role: AI developer portfolio site
+    capability: [portfolio]
+    url: https://github.com/cyber-lazer-mermicorn/cherry-portfolio
+    next: Feature Tower + vertical case studies
+  - id: job_helix
+    name: job-app-helix
+    kind: career
+    visibility: public
+    role: Job application workflow / helix
+    capability: [applications]
+    url: https://github.com/cyber-lazer-mermicorn/job-app-helix
+    next: Feed from Tower surface + private ops applications
+  - id: commerce
+    name: mermicorn-commerce-ai
+    kind: engine
+    visibility: public
+    role: Product records, pricing, listings, leads, campaigns, multichannel packages
+    capability: [commerce_ai, listings, leads]
+    url: https://github.com/cyber-lazer-mermicorn/mermicorn-commerce-ai
+    next: Ingest vertical packets into shared schema
+  - id: graphic
+    name: mermicorn-graphic-ai
+    kind: engine
+    visibility: public
+    role: Shared visual system across clothing, gaming, listings, travel, branding
+    capability: [visual_system, brand_assets]
+    url: https://github.com/cyber-lazer-mermicorn/mermicorn-graphic-ai
+    next: Align Drop 001 + listing assets
+  - id: token_saver
+    name: mermicorn-token-saver
+    kind: engine
+    visibility: public
+    role: Prompt packs, context compression, handoffs, token budgets
+    capability: [efficiency, handoffs]
+    url: https://github.com/cyber-lazer-mermicorn/mermicorn-token-saver
+    next: Wire budgets into operator modules
+  - id: mega_boot
+    name: mermicorn-mega-boot
+    kind: engine
+    visibility: public
+    role: One-command compliant Mermicorn project scaffold
+    capability: [bootstrap, scaffold]
+    url: https://github.com/cyber-lazer-mermicorn/mermicorn-mega-boot
+    next: Emit federation docs by default
+  - id: client
+    name: mermicorn-client
+    kind: engine
+    visibility: public
+    role: Platform client connecting verticals
+    capability: [client, integration]
+    url: https://github.com/cyber-lazer-mermicorn/mermicorn-client
+    next: Route through command-board integrations
+  - id: ravewear
+    name: cherry-ravewear-studio
+    kind: vertical
+    visibility: public
+    role: Primary passion brand — rave clothing, Drop 001, mockups, tech packs
+    capability: [design, production_handoff]
+    url: https://github.com/cyber-lazer-mermicorn/cherry-ravewear-studio
+    next: Package Drop 001 via graphic + commerce
+  - id: travel
+    name: cherry-travel-deal-lab
+    kind: vertical
+    visibility: public
+    role: Travel deal research, comparison, portfolio recommendations
+    capability: [deal_hunting, itinerary]
+    url: https://github.com/cyber-lazer-mermicorn/cherry-travel-deal-lab
+    next: Case studies → commerce schema
+  - id: auto
+    name: cherry-auto-matchmaker
+    kind: vertical
+    visibility: public
+    role: Vehicle research packets, comps, buyer matching, follow-up
+    capability: [auto_sales, comps]
+    url: https://github.com/cyber-lazer-mermicorn/cherry-auto-matchmaker
+    next: Packet schema parity with commerce
+  - id: numismatic
+    name: cherry-numismatic-auction-lab
+    kind: vertical
+    visibility: public
+    role: Coin intake → photo, attribution, comps, listing, auction strategy
+    capability: [collectibles, auction]
+    url: https://github.com/cyber-lazer-mermicorn/cherry-numismatic-auction-lab
+    next: Provenance hooks + commerce package
+  - id: rift
+    name: cherry-rift-lab
+    kind: vertical
+    visibility: public
+    role: Wild Rift journals, patch digests, matchup notes
+    capability: [gaming_content]
+    url: https://github.com/cyber-lazer-mermicorn/cherry-rift-lab
+    next: Portfolio-ready builds cadence
+  - id: chance
+    name: cherry-chance-game-lab
+    kind: vertical
+    visibility: public
+    role: Responsible chance-game UX, volatility, session tools, budget tracking
+    capability: [responsible_play, ux]
+    url: https://github.com/cyber-lazer-mermicorn/cherry-chance-game-lab
+    next: Keep education-first framing
+  - id: deal_finder
+    name: ai-deal-finder
+    kind: vertical
+    visibility: public
+    role: AI-powered travel deal finder with scoring
+    capability: [deal_scoring]
+    url: https://github.com/cyber-lazer-mermicorn/ai-deal-finder
+    next: Align scoring with travel-deal-lab
   - id: mcp_hub
     name: mcp-hub
     kind: infrastructure
@@ -118,8 +184,7 @@ nodes:
     role: MCP integration hub for agent tools
     capability: [mcp, tool_routing]
     url: https://github.com/cyber-lazer-mermicorn/mcp-hub
-    next: Align with Tower TypeScript MCP gateway patterns
-
+    next: Align with Tower TypeScript MCP gateway
   - id: agent_orch
     name: ai-agent-orchestrator
     kind: infrastructure
@@ -127,8 +192,191 @@ nodes:
     role: Agent orchestration infrastructure
     capability: [agents, orchestration]
     url: https://github.com/cyber-lazer-mermicorn/ai-agent-orchestrator
-    next: Cross-link Tower Python orchestrator exhibits
-
+    next: Cross-link Tower Python orchestrator
+  - id: edge_runtime
+    name: edge-ai-runtime
+    kind: infrastructure
+    visibility: public
+    role: Edge AI runtime
+    capability: [edge, runtime]
+    url: https://github.com/cyber-lazer-mermicorn/edge-ai-runtime
+    next: Define deployment targets
+  - id: ai_gateway
+    name: ai-gateway
+    kind: infrastructure
+    visibility: public
+    role: AI gateway layer
+    capability: [gateway]
+    url: https://github.com/cyber-lazer-mermicorn/ai-gateway
+    next: Rate limit + provider routing patterns
+  - id: ai_memory
+    name: ai-memory
+    kind: infrastructure
+    visibility: public
+    role: AI memory patterns (public code)
+    capability: [memory]
+    url: https://github.com/cyber-lazer-mermicorn/ai-memory
+    next: Do not confuse with private mermicorn-memory
+  - id: multi_modal
+    name: multi-modal-ai
+    kind: infrastructure
+    visibility: public
+    role: Multi-modal AI infrastructure
+    capability: [multimodal]
+    url: https://github.com/cyber-lazer-mermicorn/multi-modal-ai
+    next: Feed graphic + agent surfaces
+  - id: ai_observability
+    name: ai-observability
+    kind: infrastructure
+    visibility: public
+    role: Production AI observability
+    capability: [observability]
+    url: https://github.com/cyber-lazer-mermicorn/ai-observability
+    next: Metrics schema shared with command-board
+  - id: ai_benchmarks
+    name: ai-benchmarks
+    kind: infrastructure
+    visibility: public
+    role: AI benchmarks harness
+    capability: [benchmarks]
+    url: https://github.com/cyber-lazer-mermicorn/ai-benchmarks
+    next: Align with Tower eval harness concepts
+  - id: ai_testing
+    name: ai-testing
+    kind: infrastructure
+    visibility: public
+    role: AI testing patterns
+    capability: [testing]
+    url: https://github.com/cyber-lazer-mermicorn/ai-testing
+    next: Shared with Tower eval floor
+  - id: ai_starter
+    name: ai-starter-template
+    kind: infrastructure
+    visibility: public
+    role: Production AI starter template
+    capability: [template]
+    url: https://github.com/cyber-lazer-mermicorn/ai-starter-template
+    next: Emit from mega-boot
+  - id: ai_governance
+    name: ai-governance-platform
+    kind: infrastructure
+    visibility: public
+    role: Enterprise AI governance, trust & compliance
+    capability: [governance, compliance]
+    url: https://github.com/cyber-lazer-mermicorn/ai-governance-platform
+    next: Policy hooks ↔ Tower Rust governor ideas
+  - id: rag_builder
+    name: rag-pipeline-builder
+    kind: toolkit
+    visibility: public
+    role: RAG pipeline builder — bottleneck solver
+    capability: [rag]
+    url: https://github.com/cyber-lazer-mermicorn/rag-pipeline-builder
+    next: Connect to ai-memory + vector patterns
+  - id: feature_flags
+    name: ai-feature-flags
+    kind: toolkit
+    visibility: public
+    role: AI feature flags
+    capability: [flags]
+    url: https://github.com/cyber-lazer-mermicorn/ai-feature-flags
+    next: Integrate with gateway
+  - id: security_scanner
+    name: ai-security-scanner
+    kind: toolkit
+    visibility: public
+    role: AI security scanner
+    capability: [security]
+    url: https://github.com/cyber-lazer-mermicorn/ai-security-scanner
+    next: CI gate for agent tool surfaces
+  - id: supabase_starter
+    name: supabase-ai-starter
+    kind: toolkit
+    visibility: public
+    role: Supabase AI starter
+    capability: [supabase]
+    url: https://github.com/cyber-lazer-mermicorn/supabase-ai-starter
+    next: Align with supabase-showcase
+  - id: groq_speed
+    name: groq-speed-test
+    kind: toolkit
+    visibility: public
+    role: Groq speed test harness
+    capability: [latency]
+    url: https://github.com/cyber-lazer-mermicorn/groq-speed-test
+    next: Feed benchmarks
+  - id: vercel_cookbook
+    name: vercel-ai-cookbook
+    kind: toolkit
+    visibility: public
+    role: Vercel AI cookbook patterns
+    capability: [vercel_ai]
+    url: https://github.com/cyber-lazer-mermicorn/vercel-ai-cookbook
+    next: Share with vercel-showcase
+  - id: healthcare_toolkit
+    name: healthcare-ai-toolkit
+    kind: toolkit
+    visibility: public
+    role: Healthcare AI toolkit patterns
+    capability: [healthcare]
+    url: https://github.com/cyber-lazer-mermicorn/healthcare-ai-toolkit
+    next: Compliance-aware defaults only
+  - id: showcase_vercel
+    name: vercel-showcase
+    kind: showcase
+    visibility: public
+    role: Vercel AI solutions engineer showcase
+    capability: [showcase]
+    url: https://github.com/cyber-lazer-mermicorn/vercel-showcase
+    next: Link from portfolio + resume
+  - id: showcase_supabase
+    name: supabase-showcase
+    kind: showcase
+    visibility: public
+    role: Supabase AI solutions engineer showcase
+    capability: [showcase]
+    url: https://github.com/cyber-lazer-mermicorn/supabase-showcase
+    next: Link from portfolio
+  - id: showcase_stripe
+    name: stripe-showcase
+    kind: showcase
+    visibility: public
+    role: Stripe AI solutions engineer showcase
+    capability: [showcase]
+    url: https://github.com/cyber-lazer-mermicorn/stripe-showcase
+    next: Commerce payment narrative
+  - id: showcase_openai
+    name: openai-showcase
+    kind: showcase
+    visibility: public
+    role: OpenAI solutions engineer showcase
+    capability: [showcase]
+    url: https://github.com/cyber-lazer-mermicorn/openai-showcase
+    next: Job surface proof
+  - id: showcase_groq
+    name: groq-showcase
+    kind: showcase
+    visibility: public
+    role: Groq solutions engineer showcase
+    capability: [showcase]
+    url: https://github.com/cyber-lazer-mermicorn/groq-showcase
+    next: Latency narrative
+  - id: showcase_anthropic
+    name: anthropic-showcase
+    kind: showcase
+    visibility: public
+    role: Anthropic solutions engineer showcase
+    capability: [showcase]
+    url: https://github.com/cyber-lazer-mermicorn/anthropic-showcase
+    next: Job surface proof
+  - id: showcase_langchain
+    name: langchain-showcase
+    kind: showcase
+    visibility: public
+    role: LangChain production patterns showcase
+    capability: [showcase]
+    url: https://github.com/cyber-lazer-mermicorn/langchain-showcase
+    next: Align with agent_orch
   - id: memory
     name: mermicorn-memory
     kind: memory
@@ -136,8 +384,7 @@ nodes:
     role: Preferences, skills, evidence, project history, decisions, continuity
     capability: [continuity, evidence]
     url: null
-    next: Keep private; never imply public reachability
-
+    next: Never imply public reachability
   - id: private_ops
     name: mermicorn-private-ops
     kind: ops
@@ -145,4 +392,4 @@ nodes:
     role: Operational records — vendor data, unpublished designs, applications, leads
     capability: [ops_records]
     url: null
-    next: No secrets in repo; private only
+    next: No secrets; private only
