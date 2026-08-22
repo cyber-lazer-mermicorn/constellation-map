@@ -1,0 +1,121 @@
+version: "1.0.0"
+updated: "2026-08-22"
+owner: cyber-lazer-mermicorn
+
+# Live operator connectors (Grok MCP) + product runtime connectors
+connectors:
+  - id: github
+    kind: operator
+    status: ready
+    quality: high
+    function: "Repos, CI, PRs, Actions, code search, file push"
+    proof: "cyber-lazer-mermicorn org active"
+    next: "Keep Actions green; prefer npm install until lockfiles committed"
+
+  - id: vercel
+    kind: operator
+    status: ready
+    quality: high
+    function: "10 projects, deploys, domains, team cyber-lazerwrmicorn"
+    proof: "9 READY · 1 ERROR (rental historical)"
+    next: "Confirm rental Git link + env so latest main deploys"
+
+  - id: stripe
+    kind: operator_and_product
+    status: ready_operator
+    quality: high_operator
+    function: "Payments — Hi-Class Home services acct_1Stumk36x9apQsqJ livemode"
+    product_path: "cherry-rental-engine /api/stripe/*"
+    next: "Paste STRIPE_SECRET_KEY + WEBHOOK_SECRET on Vercel; register webhook"
+
+  - id: calendly
+    kind: operator_and_product
+    status: ready
+    quality: high
+    function: "Scheduling — Cherry Chan, Pacific/Honolulu"
+    public_urls:
+      - https://calendly.com/cyber-lazer-mermicorn
+      - https://calendly.com/cyber-lazer-mermicorn/30min
+    event_types:
+      - name: "30 Minute Meeting"
+        duration: 30
+        location: google_conference
+    product_path: "cherry-rental-engine GET /api/calendly"
+    next: "Embed 30min on host dashboard + portfolio hire CTA"
+
+  - id: google_calendar
+    kind: operator
+    status: ready
+    quality: medium
+    function: "Primary + Family calendars listed via MCP"
+    next: "Optional: sync host busy times into rental calendar_blocks"
+
+  - id: gmail
+    kind: operator
+    status: ready
+    quality: medium
+    function: "Labels + mail ops for operator workflow"
+    next: "Wire Resend for product email; keep Gmail for human ops"
+
+  - id: outlook
+    kind: operator
+    status: ready
+    quality: medium
+    function: "Folder list + mail ops"
+    next: "Use only if dual-inbox workflow is active"
+
+  - id: linear
+    kind: operator
+    status: ready
+    quality: medium
+    function: "Issues, labels, project tracking"
+    next: "Mirror P0 rental deploy + connector tasks as issues"
+
+  - id: notion
+    kind: operator
+    status: unknown
+    quality: unknown
+    function: "Docs / wiki if connected"
+    next: "Verify connection when knowledge base is needed"
+
+  - id: supabase
+    kind: product
+    status: ready_schema
+    quality: high_schema
+    function: "Rental DB — listings, bookings, ical_sources, calendar_blocks"
+    url: https://lhffbarbrjmxdbdvlqnn.supabase.co
+    next: "Ensure service role on Vercel; regenerate types after migrations"
+
+  - id: ical
+    kind: product
+    status: ready_code
+    quality: high
+    function: "Import external blocks + export listing feed"
+    product_path: "POST /api/ical/import · GET /api/ical/[listingId]"
+    next: "Cron re-sync all ical_sources nightly"
+
+  - id: resend
+    kind: product
+    status: missing_key
+    quality: code_ready
+    function: "Transactional email for booking messages"
+    next: "Add RESEND_API_KEY when sending real mail"
+
+  - id: automations
+    kind: operator
+    status: empty
+    quality: low
+    function: "Scheduled / event-triggered Grok tasks"
+    next: "Create: daily connector health ping + weekly status digest"
+
+  - id: voice
+    kind: operator
+    status: ready
+    quality: medium
+    function: "TTS for demos / accessibility"
+    next: "Optional portfolio audio intros"
+
+quality_bar:
+  ready: "Live probe succeeds; secrets in env not repo; public URLs documented"
+  partial: "Code or MCP works; missing env or product wiring"
+  missing: "Not usable until human pastes keys or links Git"
